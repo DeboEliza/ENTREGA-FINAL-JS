@@ -33,4 +33,24 @@ function calcularPrecioConDescuento (){
 
 calcularPrecioConDescuento ();
 
+function pollera (tela,largo,estilo){
+     this.tela = tela;
+     this.largo = largo;
+     this.estilo = estilo;
+
+  this.mostrarTela = function(){connsole.log ("Tela: " + this.tela)};
+  this.mostrarLargo = function(){connsole.log ("Largo: " + this.largo)};
+  this.mostrarEstilo = function(){connsole.log ("Estilo: " + this.Estilo)};
+}
+
+const pollera1= new pollera ("Lanilla","Larga","acampanada");
+const pollera2= new pollera ("Seda","Corta","Recta");
+
+pollera1.mostrarTela();
+pollera1.mostrarLargo();
+pollera1.mostrarEstilo();
+
+pollera2.mostrarTela();
+pollera2.mostrarTela();
+pollera2.mostrarTela();
 
