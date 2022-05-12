@@ -66,3 +66,20 @@ console.log ("te gusta - "  + tela);
 console.log ("te gusta - "  + estilo);
 
 console.log( "GENIAL!! GRACIAS POR TU OPINION!")
+
+const listaProductos=["vestidos","pantalones","remeras","faldas","camperas","pijamas"];
+listaProductos.push("shorts");
+console.log(listaProductos);
+
+const listaDeudores=["Gutierres","Farias","Carriso","Gonzales"];
+const pagosAtrasados=["2","1","3","4"];
+
+let apellido= prompt("Ingresa Tu apellido para saber si tienes deuda");
+let indice= listaDeudores.indexOf(apellido);
+
+if (indice!= -1){
+  console.log("Te informamos "+apellido+" en mora cuotas " + pagosAtrasados[indice]);
+
+}  else{
+  console.log("Te informamos "+apellido+" Estás al día con tus pagos");
+}
