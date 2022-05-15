@@ -83,3 +83,69 @@ if (indice!= -1){
 }  else{
   console.log("Te informamos "+apellido+" Estás al día con tus pagos");
 }
+
+
+
+const preciosProductos =[ 3500,5800,4850,1800,7350];
+
+function realizar(operacion,lista){
+  for (
+    const elemento of lista){
+      operacion (elemento);
+    }
+  
+}
+
+let total=0;
+function sumarTotal (precio){
+  total = total+ precio;
+}
+
+function calcularIva (precio){
+  console.log ( "Precio $ "+ precio+" con iva: $  "+ precio * 1.21);
+  
+}
+
+realizar(sumarTotal, preciosProductos);
+ console.log ("Total de la compra $"  + total);
+
+realizar ( calcularIva , preciosProductos);
+console.log ("Total de la compra con iva  $"  + total);
+
+const indumentaria=[
+  {
+      tipo:"Pantalones",
+      marca:"Gap",
+      genero:"masculino",
+      precio:3850
+  },
+  {
+    tipo:"Falda",
+    marca:"Gap",
+    genero:"femenino",
+    precio:2800
+  },
+  {
+    tipo:"Pijamas",
+    marca:"Piesitos",
+    genero:"niñas",
+    precio:2500
+  },
+  {
+    tipo:"Pijamas",
+    marca:"Piesitos",
+    genero:"niños",
+    precio:2750
+  },
+];
+               
+indumentaria.forEach ( (indumentaria) => {
+  console.log ("marca: " + indumentaria.marca)
+});
+
+const listaMasBarata = indumentaria.filter((indumentaria)=> indumentaria.precio < 3000);
+console.log( listaMasBarata);
+
+const encontrar = indumentaria.find ((indumentaria)=> indumentaria.genero == "niñas");
+console.log (encontrar);
+
