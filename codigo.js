@@ -33,56 +33,56 @@
 
 //calcularPrecioConDescuento ();
 
-function Pollera (tela,largo,estilo){
-     this.tela = tela;
-     this.largo = largo;
-     this.estilo = estilo;
+//function Pollera (tela,largo,estilo){
+    // this.tela = tela;
+    // this.largo = largo;
+    // this.estilo = estilo;
 
-  this.mostrarTela = function() {console.log ("Tela: " + this.tela)};
-  this.mostrarLargo = function() {console.log ("Largo: " + this.largo)};
-  this.mostrarEstilo = function() {console.log ("Estilo: " + this.estilo)};
-}
+  //this.mostrarTela = function() {console.log ("Tela: " + this.tela)};
+ // this.mostrarLargo = function() {console.log ("Largo: " + this.largo)};
+ // this.mostrarEstilo = function() {console.log ("Estilo: " + this.estilo)};
+//}
 
-const Pollera1= new Pollera ("Lanilla","Larga", "Acampanada");
-const Pollera2= new Pollera ("Seda","Corta", "Recta");
+//const Pollera1= new Pollera ("Lanilla","Larga", "Acampanada");
+//const Pollera2= new Pollera ("Seda","Corta", "Recta");
 
-console.log("FALDA 1")
-Pollera1.mostrarTela();
-Pollera1.mostrarLargo();
-Pollera1.mostrarEstilo();
+//console.log("FALDA 1")
+//Pollera1.mostrarTela();
+//Pollera1.mostrarLargo();
+//Pollera1.mostrarEstilo();
 
-console.log("FALDA 2")
-Pollera2.mostrarTela();
-Pollera2.mostrarLargo();
-Pollera2.mostrarEstilo();
+//console.log("FALDA 2")
+//Pollera2.mostrarTela();
+//Pollera2.mostrarLargo();
+//Pollera2.mostrarEstilo();
 
-console.log ("Hola Cual es tu Falda Favorita?")
-let marca = prompt ("Ingresa la marca que te gusta");
-let tela = prompt ("Ingresa tipo de tela que te gusta");
-let estilo = prompt("Ingresa el estilo que te gusta");
+//console.log ("Hola Cual es tu Falda Favorita?")
+//let marca = prompt ("Ingresa la marca que te gusta");
+//let tela = prompt ("Ingresa tipo de tela que te gusta");
+//let estilo = prompt("Ingresa el estilo que te gusta");
 
-console.log ("te gusta - "  + marca);
-console.log ("te gusta - "  + tela);
-console.log ("te gusta - "  + estilo);
+//console.log ("te gusta - "  + marca);
+//console.log ("te gusta - "  + tela);
+//console.log ("te gusta - "  + estilo);
 
-console.log( "GENIAL!! GRACIAS POR TU OPINION!")
+//console.log( "GENIAL!! GRACIAS POR TU OPINION!")
 
-const listaProductos=["vestidos","pantalones","remeras","faldas","camperas","pijamas"];
-listaProductos.push("shorts");
-console.log(listaProductos);
+//const listaProductos=["vestidos","pantalones","remeras","faldas","camperas","pijamas"];
+//listaProductos.push("shorts");
+//console.log(listaProductos);
 
-const listaDeudores=["Gutierres","Farias","Carriso","Gonzales"];
-const pagosAtrasados=["2","1","3","4"];
+//const listaDeudores=["Gutierres","Farias","Carriso","Gonzales"];
+//const pagosAtrasados=["2","1","3","4"];
 
-let apellido= prompt("Ingresa Tu apellido para saber si tienes deuda");
-let indice= listaDeudores.indexOf(apellido);
+//let apellido= prompt("Ingresa Tu apellido para saber si tienes deuda");
+//let indice= listaDeudores.indexOf(apellido);
 
-if (indice!= -1){
-  console.log("Te informamos "+apellido+" en mora cuotas " + pagosAtrasados[indice]);
+//if (indice!= -1){
+ // console.log("Te informamos "+apellido+" en mora cuotas " + pagosAtrasados[indice]);
 
-}  else{
-  console.log("Te informamos "+apellido+" Estás al día con tus pagos");
-}
+//}  else{
+//  console.log("Te informamos "+apellido+" Estás al día con tus pagos");
+//}
 
 
 
@@ -148,4 +148,33 @@ console.log( listaMasBarata);
 
 const encontrar = indumentaria.find ((indumentaria)=> indumentaria.genero == "niñas");
 console.log (encontrar);
+
+let titulo=document.getElementById("titulo");
+titulo.innerText="FLOR INDUMENTARIA PARA TODA LA FAMILIA";
+titulo.style.color="red"
+
+let galleryTitulo = document.getElementsByClassName("galleryTitulo");
+galleryTitulo [0].innerText= "Con Rebaja $ 3150";
+galleryTitulo [0].style.color= "white";
+galleryTitulo [2].innerText= "Con Rebaja $ 4250";
+galleryTitulo [2].style.color= "white";
+galleryTitulo [4].innerText= "Con Rebaja $ 1500";
+galleryTitulo [4].style.color= "white";
+
+
+
+let parrafo = document.createElement ("div");
+parrafo.innerHTML="<h4> Puedes Encontrarnos en 8405 Pines Boulevard Pomerone Florida </h4>";
+document.body.appendChild(parrafo);
+
+
+let container = document.getElementById ("contenedorImagen");
+container.innerHTML = "< img src=assets/img/flor.jfif alt=logo></img>";
+
+
+
+
+
+
+
 
