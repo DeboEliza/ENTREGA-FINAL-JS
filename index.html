@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DesafiosDeboraSabas</title>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
     <div id="contenedorImagen">
        </div>
     <h1 id="titulo"> DESAFIO DE JAVASCRIPT</h1>
+    
     <section id="bloque">
        <h2> VENTA DE INDUMENTARIA</h2> 
        <ul>
            <li class="diasEnOferta">martes</li>
            <li class="diasEnOferta">jueves</li>
        </ul>
-       <button>Aprovecha los descuentos en todos los productos!</button>
+       <button type="button" class="btn btn-danger" id="miBoton">LOS MEJORES PRECIOS</button>
+       
     </section>
+    <form id="formulario">
+        <input type="text">
+        <input type="number">
+        <input type="submit" value="Enviar">
+      </form>
     <div class="gallery-container">
         <div class="gallery-item">
          <img src="assets/img/buso.png" alt="buso" class="gallery-imagen">
-         <h3 class="galleryTitulo"> COSTO $ 3500</h3>
+         <h3  class="galleryTitulo" id="descuento"> </h3>
         </div>
         <div class="gallery-item">
          <img src="assets/img/vestido.jfif" alt="vestido" class="gallery-imagen">
@@ -46,7 +54,7 @@
          <h3 class="galleryTitulo"> COSTO $ 7350</h3>
         </div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="codigo.js"> </script>
 </body>
 </html>

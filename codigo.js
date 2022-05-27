@@ -154,7 +154,7 @@ titulo.innerText="FLOR INDUMENTARIA PARA TODA LA FAMILIA";
 titulo.style.color="red"
 
 let galleryTitulo = document.getElementsByClassName("galleryTitulo");
-galleryTitulo [0].innerText= "Con Rebaja $ 3150";
+galleryTitulo [0].innerText= "Con Rebaja $ 3500";
 galleryTitulo [0].style.color= "white";
 galleryTitulo [2].innerText= "Con Rebaja $ 4250";
 galleryTitulo [2].style.color= "white";
@@ -169,7 +169,97 @@ document.body.appendChild(parrafo);
 
 
 let container = document.getElementById ("contenedorImagen");
-container.innerHTML = "< img src=assets/img/flor.jfif alt=logo></img>";
+container.innerHTML = "<img src='./assets/img/flor.jfif' alt=logo></img>";
+
+let boton=document.getElementById("miBoton");
+boton.addEventListener("mouseover", interactuar);
+
+function interactuar(){
+   alert ("Aprovecha estos Descuentos!!!");
+}
+
+let miFormulario      = document.getElementById("formulario");
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e){
+  //Cancelamos el comportamiento del evento
+  e.preventDefault();
+  //Obtenemos el elemento desde el cual se disparó el evento
+  let formulario = e.target
+  //Obtengo el valor del primero hijo <input type="text">
+  console.log(formulario.children[0].value); 
+  //Obtengo el valor del segundo hijo <input type="number"> 
+  console.log(formulario.children[1].value);  
+}
+
+
+localStorage.setItem('indumentaria', "pantalones,faldas,pijamas");
+localStorage.setItem('precios', [3500,5800,4850,1800,7350]);
+localStorage.setItem('esValido', true);
+
+//para recibir y ver los datos que guarde
+
+let indu =  localStorage.getItem('indumentaria');
+let preci =  localStorage.getItem('precios');
+let valida  =  localStorage.getItem('esValido');
+
+//lo veo lo que puse y debo cambiar algunas cosas
+
+alert(indu);
+console.log (valida=="true");
+
+
+let precios=localStorage.getItem("precios");
+console.log("precios");
+let listaDePrecios= precios.split(",");
+console.log(listaDePrecios);
+
+let listaDePreciosParceados=listaDePrecios.map((precios) => parseInt(precios));
+console.log(listaDePreciosParceados);
+
+
+//Ciclo para recorrer las claves almacenadas en el objeto localStorage
+for (let i = 0; i < localStorage.length; i++) {
+  let clave = localStorage.key(i);
+  console.log("Clave: "+ clave);
+  console.log("Valor: "+ localStorage.getItem(clave));
+}
+
+//formato JSON
+const producto1 = { tipo: 'pantalones', marca: "Gap" };
+const conJSON    = JSON.stringify(producto1);
+
+console.log(conJSON); // {"tipo":pantalones,"marca":"Gap"}
+console.log(typeof producto1); // object
+console.log(typeof conJSON);    // string
+
+localStorage.setItem("producto1", conJSON);
+// Se guarda {"tipo":pantalones,"marca":"Gap"}
+
+///////////////////////
+const producto2 = { tipo: 'falda', marca: "Gap" };
+const enJSON    = JSON.stringify(producto1);
+
+console.log(enJSON); // {"tipo":falda,"marca":"Gap"}
+console.log(typeof producto2); // object
+console.log(typeof enJSON);    // string
+
+localStorage.setItem("producto2", enJSON);
+// Se guarda {"tipo":falda,"marca":"Gap"}
+
+//////////////////////////////
+
+const producto3 = { tipo: 'pijamas', marca: "Piesitos" };
+const onJSON    = JSON.stringify(producto1);
+
+console.log(onJSON); // {"tipo":pijamas,"marca":"Gap"}
+console.log(typeof producto3); // object
+console.log(typeof onJSON);    // string
+
+localStorage.setItem("producto3", onJSON);
+// Se guarda {"tipo":pijamas,"marca":"Gap"}
+
+
 
 
 
