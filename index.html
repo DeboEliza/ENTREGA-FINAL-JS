@@ -8,26 +8,38 @@
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-
-<body>
+<body class="fondo">
+    <header class="header"> 
+        <div class="div_logo">
+          <a href="#"><img src=assets/img/flor.jfif  alt="logo" class="logotipo"> </a> 
+       </div>
+        <nav>
+            <ul class="ul-menu">
+              <li class="li-menu"><a href="#" class="menu">HOME</a></li>
+              <li  class="li-menu"><a href="views/productos.html" class="menu">PRODUCTOS</a></li>
+              <li  class="li-menu"><a href="views/contacto.html" class="menu">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main class="main">
     <div id="contenedorImagen">
        </div>
     <h1 id="titulo"> DESAFIO DE JAVASCRIPT</h1>
-    
     <section id="bloque">
-       <h2> VENTA DE INDUMENTARIA</h2> 
+       <h2> LOS MEJORES DIAS PARA AHORRAR</h2> 
        <ul>
-           <li class="diasEnOferta">martes</li>
-           <li class="diasEnOferta">jueves</li>
+           <li class="diasEnOferta">MARTES</li>
+           <li class="diasEnOferta">JUEVES</li>
        </ul>
        <button type="button" class="btn btn-danger" id="miBoton">LOS MEJORES PRECIOS</button>
-       
     </section>
     <form id="formulario">
-        <input type="text">
+        Tu nombre
+        <input type="text"> 
+        Edad
         <input type="number">
         <input type="submit" value="Enviar">
-      </form>
+    </form>
     <div class="gallery-container">
         <div class="gallery-item">
          <img src="assets/img/buso.png" alt="buso" class="gallery-imagen">
@@ -38,15 +50,15 @@
          <h3 class="galleryTitulo"> COSTO $ 5800</h3>
         </div>
          <div class="gallery-item">
-         <img src="assets/img/pantalones.webp" alt="pantalon" class="gallery-imagen">
+          <img src="assets/img/pantalones.webp" alt="pantalon" class="gallery-imagen">
          <h3 class="galleryTitulo"> COSTO $ 4850</h3>
         </div>
          <div class="gallery-item">
-         <img src="assets/img/pijamas.jpg" alt="pijama" class="gallery-imagen">
+         <img src="assets/img/pijamas-mujer.jpg" alt="pijama" class="gallery-imagen">
          <h3 class="galleryTitulo"> COSTO $ 3500</h3>
         </div>
          <div class="gallery-item">
-         <img src="assets/img/short.jpeg" alt="short" class="gallery-imagen">
+         <img src="assets/img/jeans-mujer.jpg" alt="short" class="gallery-imagen">
          <h3 class="galleryTitulo"> COSTO $ 1800</h3>
         </div>
          <div class="gallery-item">
@@ -54,6 +66,7 @@
          <h3 class="galleryTitulo"> COSTO $ 7350</h3>
         </div>
     </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="codigo.js"> </script>
 </body>

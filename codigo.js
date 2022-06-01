@@ -113,25 +113,55 @@ realizar ( calcularIva , preciosProductos);
 console.log ("Total de la compra con iva  $"  + total);
 
 const indumentaria=[
-  {
+  {   id:"001",
       tipo:"Pantalones",
       marca:"Gap",
       genero:"masculino",
       precio:3850
   },
-  {
-    tipo:"Falda",
+  { id:"002",
+    tipo:"Pantalones",
+    marca:"Gap",
+    genero:"femenino",
+    precio:4850
+},
+  { id:"003",
+    tipo:"vestidos",
     marca:"Gap",
     genero:"femenino",
     precio:2800
   },
-  {
+  { id:"004",
+    tipo:"CamperasHombres",
+    marca:"Flor",
+    genero:"maculino",
+    precio:7750
+  },
+  { id:"005",
+    tipo:"CamperasMujer",
+    marca:"Flor",
+    genero:"femenino",
+    precio:6750
+  },
+  { id:"006",
+    tipo:"PijamasMujer",
+    marca:"Piesitos",
+    genero:"femenino",
+    precio:3750
+  },
+  { id:"007",
+    tipo:"PijamasHombre",
+    marca:"Piesitos",
+    genero:"masculino",
+    precio:3750
+  },
+  { id:"008",
     tipo:"Pijamas",
     marca:"Piesitos",
     genero:"niñas",
     precio:2500
   },
-  {
+  { id:"009",
     tipo:"Pijamas",
     marca:"Piesitos",
     genero:"niños",
@@ -150,16 +180,18 @@ const encontrar = indumentaria.find ((indumentaria)=> indumentaria.genero == "ni
 console.log (encontrar);
 
 let titulo=document.getElementById("titulo");
-titulo.innerText="FLOR INDUMENTARIA PARA TODA LA FAMILIA";
-titulo.style.color="red"
+titulo.innerText="FLOR INDUMENTARIA";
+titulo.style.color="red";
+
+
 
 let galleryTitulo = document.getElementsByClassName("galleryTitulo");
 galleryTitulo [0].innerText= "Con Rebaja $ 3500";
-galleryTitulo [0].style.color= "white";
+galleryTitulo [0].style.color= "red";
 galleryTitulo [2].innerText= "Con Rebaja $ 4250";
-galleryTitulo [2].style.color= "white";
+galleryTitulo [2].style.color= "red";
 galleryTitulo [4].innerText= "Con Rebaja $ 1500";
-galleryTitulo [4].style.color= "white";
+galleryTitulo [4].style.color= "red";
 
 
 
@@ -168,8 +200,7 @@ parrafo.innerHTML="<h4> Puedes Encontrarnos en 8405 Pines Boulevard Pomerone Flo
 document.body.appendChild(parrafo);
 
 
-let container = document.getElementById ("contenedorImagen");
-container.innerHTML = "<img src='./assets/img/flor.jfif' alt=logo></img>";
+
 
 let boton=document.getElementById("miBoton");
 boton.addEventListener("mouseover", interactuar);
@@ -178,23 +209,8 @@ function interactuar(){
    alert ("Aprovecha estos Descuentos!!!");
 }
 
-let miFormulario      = document.getElementById("formulario");
-miFormulario.addEventListener("submit", validarFormulario);
-
-function validarFormulario(e){
-  //Cancelamos el comportamiento del evento
-  e.preventDefault();
-  //Obtenemos el elemento desde el cual se disparó el evento
-  let formulario = e.target
-  //Obtengo el valor del primero hijo <input type="text">
-  console.log(formulario.children[0].value); 
-  //Obtengo el valor del segundo hijo <input type="number"> 
-  console.log(formulario.children[1].value);  
-}
-
-
-localStorage.setItem('indumentaria', "pantalones,faldas,pijamas");
-localStorage.setItem('precios', [3500,5800,4850,1800,7350]);
+localStorage.setItem('indumentaria', "Pantalones,vestidos,Pijamas,Camperas,sueters");
+localStorage.setItem('precios', [3850,5800,4850,1800,7350,2500,2750,6750,2800]);
 localStorage.setItem('esValido', true);
 
 //para recibir y ver los datos que guarde
@@ -237,10 +253,10 @@ localStorage.setItem("producto1", conJSON);
 // Se guarda {"tipo":pantalones,"marca":"Gap"}
 
 ///////////////////////
-const producto2 = { tipo: 'falda', marca: "Gap" };
+const producto2 = { tipo: 'vestodos', marca: "Gap" };
 const enJSON    = JSON.stringify(producto1);
 
-console.log(enJSON); // {"tipo":falda,"marca":"Gap"}
+console.log(enJSON); // {"tipo":vestidos,"marca":"Gap"}
 console.log(typeof producto2); // object
 console.log(typeof enJSON);    // string
 
@@ -259,6 +275,31 @@ console.log(typeof onJSON);    // string
 localStorage.setItem("producto3", onJSON);
 // Se guarda {"tipo":pijamas,"marca":"Gap"}
 
+//guardo el array de objetos
+
+const productos = [{ id: 1,  producto: "Pantalones", precio: 3850 },
+                  {  id: 2,  producto: "Pantalones", precio: 4850 },
+                  {  id: 3,  producto: "vestidos"  , precio: 2800},
+                  {  id: 4,  producto: "CamperasHombre" , precio: 7750},
+                  {  id: 5,  producto: "CamperasMujer"  , precio: 6750},
+                  {  id: 6,  producto: "PijamaMujer" , precio: 3750},
+                  {  id: 7,  producto: "PijamaHombre"  , precio: 3750},
+                  {  id: 8,  producto: "Pijamas" , precio: 2500},
+                  {  id: 9,  producto: "Pijamas"  , precio: 2750}];
+
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
+
+// Almaceno todo el Array de los productos
+guardarLocal("listaProductos", JSON.stringify(productos));
+
+let miformulario=document.getElementById("forlmulario");
+miformulario.addEventListener ("submint", validarFormulario);
+
+function validarFormulario(e){
+  e.preventDefault();
+  alert ("Formulario Enviado")
+   
+}
 
 
 

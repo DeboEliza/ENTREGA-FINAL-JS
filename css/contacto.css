@@ -1,0 +1,65 @@
+.fondo{
+    background-image: linear-gradient(to left, rgb(238, 216, 216), rgb(224, 127, 173))
+}
+
+.header{
+    position:fixed;
+    left:0%;
+    top: 0%;
+    right: 0%;
+    height: 100px;
+    margin: 10px;
+    margin-top: 0%;
+    background-image: linear-gradient(to left, rgb(219, 102, 209),yellow,rgb(0, 255, 179));
+    display: grid;
+    grid-template-rows: 50px;
+    grid-column: 100px 10px 10px 10px 10px;
+}
+
+.logotipo{
+    margin-top: 0%;
+    margin-left: 0px;
+    width: 100px; height: 100px;
+    animation-name: paisaje-logo;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+
+}
+
+.ul-menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 140px;
+    left: 232px;
+    padding-left: 500px;
+    margin: 10%;
+
+}
+
+.menu{
+    font-size: 17px;
+    color: black;
+    margin-left: 10px;
+    list-style: none;
+} 
+.li-menu{  
+        list-style-type:none;
+        color: black;
+        padding: 10px;
+        font-size: 17px;
+        width: 119px; height: 109px;
+        transition: all 2s;
+}   
+
+.li-menu:hover {
+    height: 100px; width: 100px;
+    padding: 8px;
+    background-color: rgb(220, 231, 231);
+}    
+
+.main{
+    padding-top: 10rem;  
+}
