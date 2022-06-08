@@ -3,6 +3,7 @@
 }
 
 .header{
+    z-index: 3;
     position:fixed;
     left:0%;
     top: 0%;
@@ -64,3 +65,28 @@
     padding-top: 10rem;  
 }
 
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding: 20px;
+    margin-bottom: 20px;
+    
+
+}
+
+.gallery-item{
+margin-bottom: 50px;
+}
+
+.card{
+    width: 60%;
+    height: 40%;
+    object-fit: cover;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(240, 207, 99);
+
+   
+}

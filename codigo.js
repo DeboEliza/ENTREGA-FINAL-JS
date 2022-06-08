@@ -221,8 +221,8 @@ let valida  =  localStorage.getItem('esValido');
 
 //lo veo lo que puse y debo cambiar algunas cosas
 
-alert(indu);
-console.log (valida=="true");
+//alert(indu);
+//console.log (valida=="true");
 
 
 let precios=localStorage.getItem("precios");
@@ -301,6 +301,27 @@ function validarFormulario(e){
    
 }
 
+
+//operador ternario
+Edad > 17 ? alert("Puedes Continuar Comprando!") : alert("Necesitas Ayuda de un Mayor")
+
+//cuando le ponga carrito al trabajo 
+// con operador AND
+carrito.length === 0 && console.log("El carrito está vacío!")
+
+//si el usuario tiene edad mayor o igual que 17 se almacena una nueva fecha en la variable.
+const usuario = {
+  nombre: {},
+  edad: {}
+}
+
+const registroIngreso = usuario.edad >= 17 && new Date()
+
+console.log(registroIngreso)
+
+//🛒 para recuperar el último estado de un carrito de compras del usuario
+
+const carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 
 
