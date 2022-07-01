@@ -11,13 +11,13 @@
 <body class="fondo">
     <header class="header"> 
         <div class="div_logo">
-          <a href="#"><img src=assets/img/flor.jfif  alt="logo" class="logotipo"> </a> 
+          <a href="#"><img src= "assets/img/flor.jpg" alt="logo" class="logotipo"> </a> 
        </div>
         <nav>
             <ul class="ul-menu">
               <li class="li-menu"><a href="#" class="menu">HOME</a></li>
               <li  class="li-menu"><a href="views/productos.html" class="menu">PRODUCTOS</a></li>
-              <li  class="li-menu"><a href="views/contacto.html" class="menu">CONTACTO</a></li>
+              <li  class="li-menu"><a href="#" class="menu">CONTACTO</a></li>
             </ul>
         </nav>
     </header> 
@@ -31,14 +31,14 @@
            <li class="diasEnOferta">MARTES</li>
            <li class="diasEnOferta">JUEVES</li>
        </ul>
-       <button type="button" class="btn btn-danger" id="miBoton">LOS MEJORES PRECIOS</button>
+       <button id="miBoton" type="button" class="btn btn-danger" >LOS MEJORES PRECIOS</button>
     </section>
     <form id="formulario">
         Tu nombre
         <input type="text"> 
         Edad
         <input type="number">
-        <input type="submit" value="Enviar">
+        <input id="botonEnvio" type="submit" value="Enviar">
     </form>
 
     <a href="views/productos.html"><img src="assets/img/prendas.jpg" alt="buso" class="imagen-de-descuento"></a>
@@ -56,11 +56,11 @@
          
         </div>
          <div class="gallery-item">
-          <img src="assets/img/pantalones.webp" alt="pantalon" class="gallery-imagen">
+          <img src="assets/img/pantalones.jpg" alt="pantalon" class="gallery-imagen">
          <h3 class="galleryTitulo"> COSTO $ 4850</h3>
         </div>
          <div class="gallery-item">
-         <img src="assets/img/pijamas-mujer.jpg" alt="pijama" class="gallery-imagen">
+         <img src="assets/img/pijamas.jpg" alt="pijama" class="gallery-imagen">
          <h3 class="galleryTitulo"> COSTO $ 3500</h3>
         </div>
          <div class="gallery-item">
@@ -72,8 +72,21 @@
          <h3 class="galleryTitulo"> COSTO $ 7350</h3>
         </div>
     </div>
+      <!--Desplegable del Array en JSON-->
+        <section id="vestidosDeQuinse">
+            
+        </section>
+        <button id="botonEnAlquiler" type="button" class="btn btn-danger" >Fijate si esta disponible</button>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+     <!-- Sweet Alert -->
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="sweetAlert/sweetAlert.js"></script>
+    <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     < Toastify -->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+     <!-- Luxon -->
+     <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
     <script src="codigo.js"> </script>
 </body>
 </html>

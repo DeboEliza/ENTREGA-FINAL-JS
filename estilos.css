@@ -93,11 +93,26 @@ h1{
 }
 
 button{
-    background-color: black;
+    background-color:#dc3545;
     color: aliceblue;
     border: 2px solid firebrick;
     border-radius: 6px;
+    width: 250px;
+    height: 150px;
+
 }
+
+#botonEnAlquiler{
+    width: 279px;
+    height: 50px;
+    background-color:#570f69;
+    margin-bottom: 5%;
+    margin-left: 485px;
+    
+    
+
+}
+
 
 .gallery-container {
     display: grid;
@@ -143,3 +158,10 @@ margin-bottom: -84px;
     width: 350px;
     height: 450px;
 }
+
+
+
+#vestidosDeQuinse{
+    margin-left: 500px;
+}
+

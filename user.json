@@ -1,0 +1,29 @@
+{
+    "listaAgregada": [
+            {"producto": "Vestido de Quince #102",
+             "talle":"talle 8",
+             "estado": "Disponible",
+             "precio": 10500,
+              "image":"assets/img/quince1.jfif"
+            },
+            {"producto": "Vestido de Quince #203",
+                "talle": "talle 10",
+                "estado": "Disponible",
+                "precio": 12500,
+                "image":"assets/img/quince2.jpg"
+               },
+
+               {"producto": "Vestido de Quince #333",
+                "talle": "talle 12",
+                "estado": "Disponible",
+                "precio": 9500,
+                "image":"assets/img/quince3.jfif"
+               },
+               {"producto": "Vestido de Quince #122",
+                "talle":"Talle 8",
+                "estado": "Disponible",
+                "precio": 9500,
+                "image":"assets/img/quince4.jpg"
+               }
+    ]
+}

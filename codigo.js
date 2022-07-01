@@ -1,37 +1,13 @@
 
-
-//let nombre = prompt ("nombre");
-//let apellido = prompt ( "apellido" );
-//let nombreCompleto= prompt( "nombre + apellido");
-
-//Repetimos con While hasta que el usuario ingresa "ESC"
-//while(nombreCompleto != "ESC" ){
-   // alert("Has ingresado "+ nombreCompleto);
-    //Volvemos a solicitar un dato. En la próxima iteración se evalúa si no es ESC.
-  //  entrada= prompt("ingresar otro dato - ESC para finalizar")
-//}
-
-
-// calcuraremos un precio de la indumentaria
-//let nombreProducto = prompt ("Ingresa Nombre Producto")
-//alert ("Igresaste=" + nombreProducto);
-//console.log ("Tu producto - " + nombreProducto);
-
-//let colorDelProducto = prompt ("Ingresa color del Producto")
-//alert ("Ingresaste=" + colorDelProducto);
-//console.log ("tu color - " + colorDelProducto);
-
-//let TallaProducto = prompt ("Ingresa Talla del Producto")
-//alert ("Ingresaste=" + TallaProducto);
-//console.log ("tu talla - "  + TallaProducto);
-
+///////////////////////////////////////////////////////////////////
 //function calcularPrecioConDescuento (){
   //  let precioProducto = (parseFloat ( prompt ("Ingrese el precio del producto")));
   //  let precioFinal = precioProducto * 0.5 ;
   //  console.log ( "En efectivo con Descuento $" + precioFinal);
 //}
-
+///////////////////////////////////////////////////////////////////////
 //calcularPrecioConDescuento ();
+/////////////////////////////////////////////////////////////////////////////
 
 //function Pollera (tela,largo,estilo){
     // this.tela = tela;
@@ -84,9 +60,7 @@
 //  console.log("Te informamos "+apellido+" Estás al día con tus pagos");
 //}
 
-
-
-const preciosProductos =[ 3500,5800,4850,1800,7350];
+const preciosDeLosProductos =[ 3500,5800,4850,1800,7350];
 
 function realizar(operacion,lista){
   for (
@@ -106,10 +80,10 @@ function calcularIva (precio){
   
 }
 
-realizar(sumarTotal, preciosProductos);
+realizar(sumarTotal, preciosDeLosProductos);
  console.log ("Total de la compra $"  + total);
 
-realizar ( calcularIva , preciosProductos);
+realizar ( calcularIva , preciosDeLosProductos);
 console.log ("Total de la compra con iva  $"  + total);
 
 const indumentaria=[
@@ -180,9 +154,8 @@ const encontrar = indumentaria.find ((indumentaria)=> indumentaria.genero == "ni
 console.log (encontrar);
 
 let titulo=document.getElementById("titulo");
-titulo.innerText="FLOR INDUMENTARIA";
+titulo.innerText= "Flor Indumentaria";
 titulo.style.color="red";
-
 
 
 let galleryTitulo = document.getElementsByClassName("galleryTitulo");
@@ -194,20 +167,10 @@ galleryTitulo [4].innerText= "Con Rebaja $ 1500";
 galleryTitulo [4].style.color= "red";
 
 
-
 let parrafo = document.createElement ("div");
 parrafo.innerHTML="<h4> Puedes Encontrarnos en 8405 Pines Boulevard Pomerone Florida </h4>";
 document.body.appendChild(parrafo);
 
-
-
-
-let boton=document.getElementById("miBoton");
-boton.addEventListener("mouseover", interactuar);
-
-function interactuar(){
-   alert ("Aprovecha estos Descuentos!!!");
-}
 
 localStorage.setItem('indumentaria', "Pantalones,vestidos,Pijamas,Camperas,sueters");
 localStorage.setItem('precios', [3850,5800,4850,1800,7350,2500,2750,6750,2800]);
@@ -219,11 +182,10 @@ let indu =  localStorage.getItem('indumentaria');
 let preci =  localStorage.getItem('precios');
 let valida  =  localStorage.getItem('esValido');
 
-//lo veo lo que puse y debo cambiar algunas cosas
+// veo lo que puse y debo cambiar algunas cosas
 
 //alert(indu);
 //console.log (valida=="true");
-
 
 let precios=localStorage.getItem("precios");
 console.log("precios");
@@ -277,38 +239,46 @@ localStorage.setItem("producto3", onJSON);
 
 //guardo el array de objetos
 
-const productos = [{ id: 1,  producto: "Pantalones", precio: 3850 },
-                  {  id: 2,  producto: "Pantalones", precio: 4850 },
+const productosDeMiTienda = [{ id: 1,  producto: "PantalonesHombres", precio: 3850 },
+                  {  id: 2,  producto: "PantalonesMujer", precio: 4850 },
                   {  id: 3,  producto: "vestidos"  , precio: 2800},
                   {  id: 4,  producto: "CamperasHombre" , precio: 7750},
                   {  id: 5,  producto: "CamperasMujer"  , precio: 6750},
                   {  id: 6,  producto: "PijamaMujer" , precio: 3750},
                   {  id: 7,  producto: "PijamaHombre"  , precio: 3750},
-                  {  id: 8,  producto: "Pijamas" , precio: 2500},
-                  {  id: 9,  producto: "Pijamas"  , precio: 2750}];
+                  {  id: 8,  producto: "PijamasNinos" , precio: 2500},
+                  {  id: 9,  producto: "SueterHombre" , precio: 6000},
+                  {  id: 10,  producto: "SueterMujer" , precio: 5500},
+                  {  id: 11,  producto: "Pijamas"  , precio: 2750}];
 
 const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
 
 // Almaceno todo el Array de los productos
-guardarLocal("listaProductos", JSON.stringify(productos));
+guardarLocal("listaProductos", JSON.stringify(productosDeMiTienda));
 
-let miformulario=document.getElementById("forlmulario");
-miformulario.addEventListener ("submint", validarFormulario);
 
-function validarFormulario(e){
-  e.preventDefault();
-  alert ("Formulario Enviado")
-   
-}
+/// Al boton de descuento le pongo sweetAlert
+let oferton=document.getElementById("miBoton");
 
+oferton.addEventListener("mouseover", () => interactuarUno());
+function interactuarUno(){
+  Swal.fire("Aprovecha los descuentos");
+} 
+
+
+let otroBoton=document.getElementById("botonEnvio");
+
+otroBoton.addEventListener("click", () => interactuar());
+function interactuar(){
+  Swal.fire({
+    title: 'Tus datos fueron guardados',
+    timer:5000,
+  })
+  
+} 
 
 //operador ternario
-Edad > 17 ? alert("Puedes Continuar Comprando!") : alert("Necesitas Ayuda de un Mayor")
-
-//cuando le ponga carrito al trabajo 
-// con operador AND
-carrito.length === 0 && console.log("El carrito está vacío!")
-
+//Edad > 17 ? alert("Puedes Continuar Comprando!") : alert("Necesitas Ayuda de un Mayor")
 //si el usuario tiene edad mayor o igual que 17 se almacena una nueva fecha en la variable.
 const usuario = {
   nombre: {},
@@ -319,14 +289,72 @@ const registroIngreso = usuario.edad >= 17 && new Date()
 
 console.log(registroIngreso)
 
-//🛒 para recuperar el último estado de un carrito de compras del usuario
+// para recuperar el último estado de un carrito de compras del usuario
 
 const carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 
+//GET
+// obtenerLista-de-vestidos-de-quinse//
 
+fetch ("user.json")
+.then ((respuesta)=> respuesta.json())
+.then ((json)=> console.log(json));
 
+ //funciona perfecto!!!
 
+// ----- ahora consumo un archivo-----
 
+  function obtenerArchivo(){
+        const URLGET="user.json";
+          document.querySelector ("#vestidosDeQuinse").innerHTML="<button id='cargarVestidos'>VESTIDOS DE 15 AÑOS\n EN ALQUILER</button>";
+  //  --- UN BOTON le pongo una accion!----
+    document.querySelector("#cargarVestidos").onclick=()=>{
+      fetch (URLGET)
+           .then (resultado => resultado.json())
+            .then (data =>{
+               let misVestidos=(data.listaAgregada);
+                    for( const vestido of misVestidos){
+                     document.querySelector("#vestidosDeQuinse").innerHTML+=`
+                           <h3 id='tituloQuinse'> ${vestido.producto} </h3>
+                           <p> ${vestido.talle}</p>
+                           <img src=${vestido.image}>
+                             `
+                   }
+              })
+ 
+       }
+ }
 
+ obtenerArchivo()
+
+// ASYNC-AWAIT con Swal
+
+let verDisponibles=document.getElementById("botonEnAlquiler")
+
+verDisponibles.addEventListener("click", () => interactuarcuatro());
+
+function interactuarcuatro(){
+  (async ()=>{
+         const{value: vestidos} = await Swal.fire({
+                  title: "elige Vestido",
+               icon:"question",
+                  confirmButtonText: "Seleccionar",
+               input:"select",
+               inputPlaceholder:"vestido",
+                inputValue:"",
+                  inputOptions:{
+                        vestido102Disponible:"#102",
+                        vestido203Disponible:"#203",
+                        vestido333Disponible:"#333",
+                        vestido122Disponible:"#122",
+                     }
+            });
+                if(vestidos){
+                     Swal.fire({
+                     title:`Seleccionaste ${vestidos}`
+                       });       
+                }
+   })()
+}
 
